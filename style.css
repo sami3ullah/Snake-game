@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Arial;
+}
+
+body{
+    background: #F1F7ED;
+    position: relative;
+}
+
+div.container{
+    display: block;
+    /* margin-top: 7rem; */
+    width: 625px;
+    margin: 6rem auto;
+    border: 1px solid black;
+    position: relative;
+}
+
+div.row{
+    padding: 0;
+    margin: 0;
+}
+
+div.col{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin-right: -5px;
+    text-align: center;
+    line-height: 50px;
+    background: #B33951;
+    border: 1.5px solid #F1F7ED;
+    color: #fff;
+
+
+}
+
+div.home{
+    background: black;
+    vertical-align: center;
+    font-weight: bold; 
+}
+
+.snake{
+    position: absolute;
+    z-index: 1;
+}
+
+.snake_green{
+    top: 84px;
+    left: 50px;
+    z-index: 2;
+    width: 51%;
+    transform: rotate(30deg);
+}
+
+.snake_green2{
+    width: 30%;
+    transform: rotate(30deg);
+    top: 260px;
+    right: -10px;
+}
+
+.snake_grad{
+    width: 25%;
+    right: 140px;
+    bottom: 30px;
+    transform: rotateY(180deg) rotate(30deg);
+
+}
+
+.snake_grad2{
+    width: 55%;
+    left: -10px;
+    top: 340px;
+    z-index: 2;
+    transform: rotateY(180deg) skew(20deg) rotate(80deg);
+
+}
+
+.dice_container{
+    position: absolute;
+    top: 70%;
+    right: 5%;
+}
+
+input[type='button']{
+    padding: 1rem 2.5rem;
+    font-weight: bold;
+    font-size: 19px;
+    color: #B33951;
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 42px;
+    margin-left: 30px;
+    border: 2px solid #B33951;
+    transition: all .3s ease;
+
+}
+
+input[type='button']:hover{
+    background: #B33951;
+    color: #F1F7ED;
+}
+
+.heading{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.headingSpecial{
+    padding-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    background-image: linear-gradient(to top, #b33951, #c4314b, #d42842, #e31d37, #f01029, #f43220, #f64813, #f85a00, #f2780c, #ec9124, #e7a63d, #e3b959);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hide{
+    display: none;   
+}
+
+#dice{
+    font-size: 6rem;
+    color: #B33951;
+    float: left;
+}
+
+
+.win{
+    position: absolute;
+    z-index: 10;
+    font-size: 30px;
+    padding: 2rem 4rem;
+    color: #B33951;
+    background: white;
+    border-radius: 20px;
+    font-weight: bold;
+    transform: translateX(-500px);
+    top: 200px;
+
+}
+
+.winAnimation{
+    transform: translateX(770px);
+}
+
+.pallete{
+    position: absolute;
+    z-index: 5;
+    left: -68px;
+    bottom: 6px;
+    width: 8%;
+    transition: all .7s ease;
+    box-shadow: 0.1px .5px 2rem #999;
+    border-radius: 50%;
+}
+
+.stair{
+    position: absolute;
+    z-index: 1;
+}
+
+.stair1{
+    width: 6%;
+    right: 170px;
+    top: 75px;
+    transform: rotate(45deg);
+}
+
+.stair2{
+    right: 135px;
+    top: 230px;
+    width: 6.5%;
+    transform: rotate(-45deg);
+
+}
+
+.stair3{
+    width: 5%;
+    top: 240px;
+    left: 180px;
+    transform: rotate(-45deg);
+}
+
+@media only screen and (max-width: 1200px) {
+
+    #dice{
+        float: right;
+    }
+
+    .dice_container{
+        top: 0;
+        left: 0;
+    }
+}
